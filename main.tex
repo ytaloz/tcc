@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Template de Relat�rio Parcial baseado nas normas da ABNT voltado
+%% para alunos da UEFS, baseado no modelo de TCC
+%% Vers�o 1.3
+%% Desenvolvimento: Danilo de Oliveira Gon�alves
+%% Adapta��o final: Jo�o Carlos Nunes Bittencourt, Maria Alice O. C. Leal
+%% Data: 31/03/2011
+%% Atualiza��o: 22/07/2013
+% TODO: Ajustar o espa�amento do cabe�alho do Ap�ndice e do Anexo.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{}
+
+\RequirePackage[hyphens]{url}
+
+\documentclass{abnt-uefs} % Classe de formata��o da UEFS
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[call=authordata,alf,abnt-emphasize=bf,abnt-etal-text=emph,abnt-and-type=e,abnt-etal-list=3,abnt-etal-cite=3,recuo=0.0cm]{abntcite}
+\usepackage[brazil]{babel}
+\usepackage{mathptmx}
+\usepackage[pdftex]{graphicx}
+%\usepackage[font=small]{caption}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+%\usepackage{textcomp}
+%\usepackage{textcase}
+\usepackage{float} % para as figuras ficarem onde foram colocadas no latex - deve colcoar na figura [H]
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{rotating}
+\usepackage{enumitem}
+%\usepackage{tabela-simbolos}
+
+%\usepackage{url}
+%\def\UrlBreaks{\do\/\do-}
+%\usepackage{breakurl}
+
+%\setcounter{tocdepth}{5}
+
+\graphicspath{{./figuras/}} % Diret�rio padr�o de figuras.
+\input{pretextuais/capa} % Elementos da capa
+\begin{document}
+
+    \renewcommand{\tablename}{Quadro}
+
+    \pagestyle{empty}
+    \DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png,.bmp,.eps}
+    \capa % gera��o autom�tica da capa
+    \folhaderosto % gera��o autom�tica da folha de rosto
+    %\termodeaprovacao % gera��o autom�tica da termo de aprovacao
+    \input{pretextuais/dedicatoria}
+    \input{pretextuais/agradecimentos}
+    \input{pretextuais/epigrafe}
+    \input{pretextuais/resumo}
+    \input{pretextuais/abstract}
+    \listadefiguras % geracao automatica da lista de figuras
+    %\listadetabelas % geracao automatica da lista de tabelas
+    \listadesimbolos % geracao automatica da lista de s�mbolos
+    \listadesiglas % % geracao automatica da lista de siglas
+    % sumario
+    \sumario % geracao automatica do sumario
+    \input{conteudo/introducao}
+    \input{conteudo/fundamentacao}
+    \input{conteudo/metodologia}
+    %\input{conteudo/tecnicas}
+    \input{conteudo/resultados}
+    \input{conteudo/conclusao}
+    % Aqui come�a a bibliografia da monografia
+    \bibliographystyle{abnt-alf}
+    \bibliography{abnt-uefs}
+    
+    % Ap�ndice e Anexos
+    %\apendice
+    %\input{postextuais/apendice}
+    %\anexo
+    %\input{postextuais/anexo}
+\end{document}
